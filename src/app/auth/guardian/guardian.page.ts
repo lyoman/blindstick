@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-guardian',
@@ -7,9 +8,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GuardianPage implements OnInit {
 
-  constructor() { }
+  user = { id: '', username: '', password: ''};
+
+  constructor(
+    private router: Router
+  ) { }
 
   ngOnInit() {
+  }
+
+  guest() {
+    this.router.navigateByUrl('/login');
+  }
+
+  login() {
+    this.router.navigateByUrl('/tabs');
+  }
+
+  register() {
+    this.router.navigateByUrl('/register');
   }
 
 }

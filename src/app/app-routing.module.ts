@@ -31,6 +31,11 @@ const routes: Routes = [
   { path: 'teb1', loadChildren: () => import('./teb1/teb1.module').then(m => m.Teb1PageModule) },
   { path: 'teb2', loadChildren: () => import('./teb2/teb2.module').then(m => m.Teb2PageModule) },
   { path: 'teb3', loadChildren: () => import('./teb3/teb3.module').then(m => m.Teb3PageModule) },
+
+  { path: '', loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule) },
+  { path: 'tab1', loadChildren: () => import('./tab1/tab1.module').then(m => m.Tab1PageModule) },
+  { path: 'tab2', loadChildren: () => import('./tab2/tab2.module').then(m => m.Tab2PageModule) },
+  { path: 'tab3', loadChildren: () => import('./tab3/tab3.module').then(m => m.Tab3PageModule) },
   {
     path: 'guardian',
     loadChildren: () => import('./auth/guardian/guardian.module').then( m => m.GuardianPageModule)
